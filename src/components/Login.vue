@@ -55,10 +55,7 @@
           password: [
             { required: true, message: 'Введите пароль', trigger: 'blur' },
             { min: 4, message: 'Пароль должен быть не менее 4 символов', trigger: 'blur'}
-          ],
-          type: [
-            { type: 'array', required: true, message: 'Запомнить вас', trigger: 'change' }
-          ],
+          ]
         }
       };
     },

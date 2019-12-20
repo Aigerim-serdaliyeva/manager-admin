@@ -10,13 +10,14 @@
       <History />
     </el-tab-pane>
     <el-tab-pane label="Обсуждения">
-      
+      <Discussion />
     </el-tab-pane>
   </el-tabs>
 </template>
 
 
 <script>
+import Discussion from './Discussion.vue'
 import History from './History.vue'
 import Materials from './Materials.vue'
 import Details from './Details.vue'
@@ -28,7 +29,7 @@ import Details from './Details.vue'
       };
     },
     components: { 
-      Details, Materials, History
+      Details, Materials, History, Discussion
     },
     methods: {
       // handleClick(tab, event) {
