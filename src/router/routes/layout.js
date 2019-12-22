@@ -1,3 +1,5 @@
+import {application} from './application'
+
 export const layout = [
   {
     path: '/',
@@ -12,7 +14,10 @@ export const layout = [
       {
         path: '/application',
         name: 'application',
-        component: () => import('../../components/application/Applications.vue')
+        component: () => import('../../components/application/Applications.vue'),
+        children: [
+          ...application
+        ]
       },
       {
         path: '/management',

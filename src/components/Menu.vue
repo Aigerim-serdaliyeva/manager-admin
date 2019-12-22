@@ -6,6 +6,13 @@
   >
     <el-menu-item index="/">Главная</el-menu-item>    
     <!-- <el-menu-item index="/application">Заявки</el-menu-item> -->
+    <el-submenu index="/application">
+      <template slot="title">Заявки</template>
+      <el-menu-item index="/application/strategic">Стратегические заявки</el-menu-item>
+      <el-menu-item index="/application/operating">Оперативные заявки</el-menu-item>
+      <el-menu-item index="/application/material">Материальные заявки</el-menu-item>
+      <el-menu-item index="/application/payment">Оплаты</el-menu-item>
+    </el-submenu>
     <!-- <el-submenu index="2">
       <template slot="title">Заявки</template>
       <el-menu-item index="2-1">Материальные заявки</el-menu-item>
