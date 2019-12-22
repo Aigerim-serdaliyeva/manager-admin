@@ -15,9 +15,7 @@ export const layout = [
         path: '/application',
         name: 'application',
         component: () => import('../../components/application/Applications.vue'),
-        children: [
-          ...application
-        ]
+        children: application,
       },
       {
         path: '/management',

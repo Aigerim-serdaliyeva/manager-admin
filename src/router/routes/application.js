@@ -1,8 +1,8 @@
 export const application = [
   {
-    path: '/application/strategic',
-        name: 'strategic',
-        component: () => import('../../components/application/StrategicApplication.vue')
+    path: 'strategic',
+    name: 'strategic',
+    component: () => import('../../components/application/StrategicApplication.vue')
     // path: '/application',
     // name: 'application',
     // component: () => import('../../components/application/Applications.vue'),
