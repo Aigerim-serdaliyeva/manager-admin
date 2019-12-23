@@ -1,23 +1,20 @@
 <template>
   <el-breadcrumb separator-class="el-icon-arrow-right">
     <el-breadcrumb-item :to="{ path: '/' }">Главная</el-breadcrumb-item>
-    <el-breadcrumb-item :to="{ path: '/application' }">Заявки</el-breadcrumb-item>
+    <el-breadcrumb-item
+      v-for="item in breadcrumbs"
+      :key="item.title"
+      :to="item.url ? { path: item.url } : undefined">{{item.title}}</el-breadcrumb-item>
   </el-breadcrumb>
 </template>
 
 <script>
-import { mapMutations } from 'vuex'
+import { mapGetters } from 'vuex'
 
 export default {
-  methods: {
-    ...mapMutations('items', {
-      setItems: "breadcrumb/setItems",
-      pushItem: "breadcrumb/pushItem",
-      popItem: "breadcrumb/popItem",
-      replaceItem: "breadcrumb/replaceItem",
-      emptyItems: "breadcrumb/emptyItems"
-    })
-  }
+  computed: mapGetters({
+    breadcrumbs: 'breadcrumb/breadcrumbs',
+  }),
 }
 </script>
 

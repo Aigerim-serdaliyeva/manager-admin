@@ -18,5 +18,9 @@ export const application = [
     path: 'payment',
     name: 'payment',
     component: () => import('../../components/application/PaymentApplication.vue')
+  },
+  {
+    path: '',
+    redirect: 'strategic',
   }
 ]
