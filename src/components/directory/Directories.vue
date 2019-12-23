@@ -1,14 +1,13 @@
 <template>
   <div>
-    <ApplicationEdit />
+    <router-view></router-view>    
   </div>
 </template>
 
 <script>
-import ApplicationEdit from '../application/ApplicationEdit.vue'
 
 export default {
-  components: { ApplicationEdit
+  components: { 
     
   }
 }

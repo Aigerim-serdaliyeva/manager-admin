@@ -10,12 +10,10 @@
 </template>
 
 <script>
-import CommentForm from '../CommentForm.vue'
-import Comment from '../Comment.vue'
+import CommentForm from '../main/CommentForm.vue'
+import Comment from '../main/Comment.vue'
 
 export default {
-  components: { Comment, CommentForm
-    
-  }
+  components: { Comment, CommentForm  }
 }
 </script>

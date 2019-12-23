@@ -1,15 +1,14 @@
 <template>
   <div>
-    <MaterialEdit />
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import MaterialEdit from '../application/MaterialEdit.vue'
 
 export default {
   components: { 
-    MaterialEdit
+    
   }
 }
 </script>

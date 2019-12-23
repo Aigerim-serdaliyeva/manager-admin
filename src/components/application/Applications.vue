@@ -1,6 +1,7 @@
 <template>
   <div>
-    <BreadcrumbApplication />
+    <Breadcrumb />
+    <router-view></router-view>
     <el-tabs type="border-card" >
       <el-tab-pane label="Детали">
         <Details />
@@ -15,12 +16,14 @@
         <Discussion />
       </el-tab-pane>
     </el-tabs>
+    <ApplicationEdit />
   </div>
 </template>
 
 
 <script>
-import BreadcrumbApplication from './BreadcrumbApplication.vue'
+import ApplicationEdit from './ApplicationEdit.vue'
+import Breadcrumb from '../main/Breadcrumb.vue'
 import Discussion from './Discussion.vue'
 import History from './History.vue'
 import Materials from './Materials.vue'
@@ -33,7 +36,7 @@ import Details from './Details.vue'
       };
     },
     components: { 
-      BreadcrumbApplication, Details, Materials, History, Discussion
+      Details, Materials, History, Discussion, Breadcrumb, ApplicationEdit 
     },
     methods: {
       

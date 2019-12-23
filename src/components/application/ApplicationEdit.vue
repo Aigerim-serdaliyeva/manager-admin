@@ -13,7 +13,7 @@
 
       <el-form-item label="Стр заявка">
         <el-select v-model="controls.zhk" placeholder="Введите текст для поиска">
-          <el-option label="ЖК 'Алма тау'" value="ЖК 'Алма тау"></el-option>
+          <el-option label="ЖК 'Алма тау'" value="ЖК 'Алма тау'"></el-option>
           <el-option label="ЖК 'Мега'" value="ЖК 'Мега'"></el-option>
         </el-select>
       </el-form-item>
