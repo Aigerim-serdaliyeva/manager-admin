@@ -36,6 +36,8 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
+
 export default {
     data() {
       return {
@@ -54,6 +56,9 @@ export default {
       };
     },
     methods: {
+      ...mapMutations({
+        setBreadcrumbs: 'breadcrumb/setBreadcrumbs'
+      }),
       onSubmit() {
         this.$refs.form.validate(async (valid) => {
           if (valid) {
@@ -62,6 +67,12 @@ export default {
           }
         });
       },
+    },
+    mounted() {
+      this.setBreadcrumbs([
+        { title: 'Менеджемент', url: '/management' },
+        { title: 'Пользователи' }
+      ])
     }
   }
 </script>

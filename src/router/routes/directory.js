@@ -23,5 +23,9 @@ export const directory = [
     path: 'suppliers',
     name: 'suppliers',
     component: () => import('../../components/directory/SuppliersDirectory.vue')
+  },
+  {
+    path: '',
+    redirect: 'object'
   }
 ]

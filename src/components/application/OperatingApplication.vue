@@ -5,9 +5,11 @@
 </template>
 
 <script>
+import MaterialEdit from './MaterialEdit.vue'
 import { mapMutations } from 'vuex'
 
 export default {
+  components: { MaterialEdit  },
   methods: {
     ...mapMutations({
       setBreadcrumbs: 'breadcrumb/setBreadcrumbs'

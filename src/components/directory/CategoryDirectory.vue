@@ -24,7 +24,10 @@
   </el-table>
 </template>
 
+
 <script>
+import { mapMutations } from 'vuex'
+
   export default {
     data() {
       return {
@@ -43,7 +46,15 @@
     },
 
     methods: {
-      
+      ...mapMutations({
+        setBreadcrumbs: 'breadcrumb/setBreadcrumbs'
+      })
+    },
+    mounted() {
+      this.setBreadcrumbs([
+        { title: 'Справочники', url: '/directory' },
+        { title: 'Категории материалов' }
+      ])
     }
   }
 </script>

@@ -34,10 +34,25 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
+
 export default {
     data() {
       return {
       };
+    },
+
+    methods: {
+      ...mapMutations({
+        setBreadcrumbs: 'breadcrumb/setBreadcrumbs'
+      })
+    },
+
+    mounted() {
+      this.setBreadcrumbs([
+        { title: 'Менеджемент', url: '/management' },
+        { title: 'Роли', }
+      ])
     }
 }
 </script>

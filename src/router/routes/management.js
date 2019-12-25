@@ -9,4 +9,8 @@ export const management = [
     name: 'roles',
     component: () => import('../../components/management/RolesManagement.vue')
   },
+  {
+    path: '',
+    redirect: 'users'
+  }
 ]
